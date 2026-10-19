@@ -1,5 +1,6 @@
 import Intro from "./Intro";
 import Stats from "./Stats";
+import Contribute from "./Contribute";
 
 function Hero({
   stars,
@@ -8,8 +9,7 @@ function Hero({
   onStar,
   onDownload,
   onReport,
-  onReset,
-}) {
+onReset,}) {
   return (
     <>
       <Intro
@@ -42,6 +42,7 @@ function Hero({
         </button>
       </div>
       <Stats stars={stars} downloads={downloads} issues={issues} />
+      <Contribute issues={issues} />
     </>
   );
 }
